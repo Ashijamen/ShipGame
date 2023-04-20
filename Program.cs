@@ -11,6 +11,7 @@ namespace ShipGame
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
+        /// test
         [STAThread]
         static void Main()
         {
