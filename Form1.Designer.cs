@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Kod generowany przez Projektanta formularzy systemu Windows
+         #region Kod generowany przez Projektanta formularzy systemu Windows
 
         /// <summary>
         /// Metoda wymagana do obsługi projektanta — nie należy modyfikować
