@@ -16,9 +16,12 @@ namespace ShipGame
         [STAThread]
         static void Main()
         {
+            //To show how works api
+
+            //Create request body
             CreateGame testRequest = new CreateGame();
             testRequest.playerName = "newPlayerOne";
-            
+
             List<Point> playerShips = new List<Point>();
 
             for (int i = 0; i < 10; i++)
@@ -30,9 +33,12 @@ namespace ShipGame
             }
 
             testRequest.ships = playerShips;
+            // send to backend
             var response = BackendApi.CreateGame(testRequest);
+            //check if staus code is 200
+            //if status code is not 200 response is instance of InfoResponse
             // if game created succesfully
-            if(response.StausCode == 200)
+            if (response.StausCode == 200)
             {
                 Console.WriteLine(response.Data.NewGameCode);
                 AddPlayer player2Request = new AddPlayer()
@@ -43,8 +49,14 @@ namespace ShipGame
                 };
                 var responsePlayer2 = BackendApi.AddPlayerTwo(player2Request);
                 Console.WriteLine(responsePlayer2.StausCode);
-                ServiceData player2Tour = BackendApi.GetPlayerTour(response.Data.NewGameCode, player2Request.playerName);
-                Console.WriteLine(player2Tour.Data.playerIndex);
+                SetPlayerTour testPutData = new SetPlayerTour()
+                {
+                    tableName = response.Data.NewGameCode,
+                    playerName = "test2",
+                };
+                //get example
+                ServiceData playerIndex = BackendApi.GetPlayerId(response.Data.NewGameCode, testPutData.playerName);
+                Console.WriteLine(playerIndex.Data.playerIndex);
             }
             else
             {
@@ -52,7 +64,6 @@ namespace ShipGame
 
             }
 
-            Console.WriteLine(RequestSender.Get("/player/tour", "?tableName=ravzavgkkv").Result);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

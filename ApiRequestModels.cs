@@ -27,4 +27,19 @@ namespace ShipGame
 
 
     }
+
+    public class DestroyShip
+    {
+        public string tableName { get; set; }
+
+        public string playerName { get; set; }
+        public Point ship { get; set; }
+
+    }
+
+    public class SetPlayerTour
+    {
+    public string playerName { get; set; }
+    public string tableName { get; set; }
+}
 }

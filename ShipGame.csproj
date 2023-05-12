@@ -52,6 +52,7 @@
     <Compile Include="BackendApi.cs" />
     <Compile Include="ApiRequestModels.cs" />
     <Compile Include="ApiResponseModels.cs" />
+    <Compile Include="BackendApiBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
