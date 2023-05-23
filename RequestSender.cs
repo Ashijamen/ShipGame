@@ -13,7 +13,7 @@ namespace ShipGame
         {
             ServiceResponse response = new ServiceResponse();
 
-            var builder = new UriBuilder("https://localhost:7185" + path + queryString);
+            var builder = new UriBuilder("http://localhost:5001" + path + queryString);
 
             var client = new HttpClient();
             var responseTask = await client.GetAsync(builder.Uri);
@@ -28,7 +28,7 @@ namespace ShipGame
         {
             ServiceResponse response = new ServiceResponse();
             var client = new HttpClient();
-            var uri = new Uri("https://localhost:7185" + path);
+            var uri = new Uri("http://localhost:5001" + path);
             var requestBody = new StringContent(content, Encoding.UTF8, "application/json");
             var responseTask = await client.PostAsync(uri, requestBody);
             Console.WriteLine($"Status code: {(int)responseTask.StatusCode} {responseTask.StatusCode}");
@@ -41,7 +41,7 @@ namespace ShipGame
         {
             ServiceResponse response = new ServiceResponse();
             var client = new HttpClient();
-            var uri = new Uri("https://localhost:7185" + path);
+            var uri = new Uri("http://localhost:5001" + path);
             var requestBody = new StringContent(content, Encoding.UTF8, "application/json");
             var responseTask = await client.PutAsync(uri, requestBody);
             Console.WriteLine($"Status code: {(int)responseTask.StatusCode} {responseTask.StatusCode}");
