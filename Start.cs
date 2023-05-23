@@ -12,6 +12,7 @@ namespace ShipGame
 {
     public partial class Start : Form
     {
+
         public Start()
         {
             InitializeComponent();
@@ -19,11 +20,13 @@ namespace ShipGame
 
         private void StworzGre(object sender, EventArgs e)
         {
-            Form1 gameWindow = new Form1();
+            Form gameWindow = new menu_gry();
 
             gameWindow.Show();
 
-
         }
+  
+
+
     }
 }

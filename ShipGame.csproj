@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dolaczenie do gry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dolaczenie do gry.Designer.cs">
+      <DependentUpon>dolaczenie do gry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_gry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_gry.Designer.cs">
+      <DependentUpon>menu_gry.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,8 +72,14 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dolaczenie do gry.resx">
+      <DependentUpon>dolaczenie do gry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_gry.resx">
+      <DependentUpon>menu_gry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
