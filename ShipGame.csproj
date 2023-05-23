@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="dolaczenie do gry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dolaczenie do gry.Designer.cs">
       <DependentUpon>dolaczenie do gry.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="BackendApi.cs" />
+    <Compile Include="ApiRequestModels.cs" />
+    <Compile Include="ApiResponseModels.cs" />
+    <Compile Include="BackendApiBase.cs" />
+>>>>>>> f863a1418803a027648c0d2b95dba802fdbc61ca
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,9 +82,13 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="dolaczenie do gry.resx">
       <DependentUpon>dolaczenie do gry.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <Compile Include="RequestSender.cs" />
+>>>>>>> f863a1418803a027648c0d2b95dba802fdbc61ca
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,9 +105,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Start.resx">
-      <DependentUpon>Start.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
