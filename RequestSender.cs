@@ -15,7 +15,7 @@ namespace ShipGame
 
             var builder = new UriBuilder("http://localhost:5001" + path + queryString);
 
-            var client = new HttpClient();
+            var client = new HttpClient(); 
             var responseTask = await client.GetAsync(builder.Uri);
             response.ResponseJson = await responseTask.Content.ReadAsStringAsync();
             response.StausCode = (int)responseTask.StatusCode;
